@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Rental Listings!</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rental Properties in Charlotte, North Carolina</h1>
+        <p>Find your dream rental property in beautiful Charlotte, North Carolina!</p>
+    </header>
+    <div class="container">
+        <div class="listing">
+            <!-- Property 2 -->
+            <div class="property-card" onclick="openModal('modal2')">
+                <img src="images/property2.jpg" alt="Property Image2">
+                <h2>Single Family</h2>
+                <p>5 Beds, 3 Baths</p>
+                <p>Charlotte, NC</p>
+                <p class="price">$ - Call for Details</p>
+            </div>
+            <!-- Property 3 -->
+            <div class="property-card" onclick="openModal('modal3')">
+                <img src="images/property3.jpg" alt="Property Image3">
+                <h2>Single Family</h2>
+                <p>5 Beds, 3 Baths</p>
+                <p>Charlotte, NC</p>
+                <p class="price">$ - Call for Details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Property 2 -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h3>Single Family</h3>
+            <img src="images/property2.jpg" alt="Property Image2">
+            <section>
+                <h3>Common Spaces:</h3>
+                <ul>
+                    <li>Fully furnished common areas include a large living room, dining area, and well-equipped kitchen.</li>
+                    <li>In-unit washer and dryer for your laundry needs.</li>
+                </ul>
+                <h3>Location:</h3>
+                <ul>
+                    <li>Conveniently situated just a five-minute drive from UNC Charlotte.</li>
+                    <li>Walking distance to Walmart for all your shopping essentials.</li>
+                </ul>
+                <p>Don’t miss out on this fantastic opportunity! Contact us today to schedule a viewing or for more details.</p>
+                <h3>Unit Details:</h3>
+                <ul>
+                    <li>House</li>
+                    <li>5 beds · 3 baths</li>
+                    <li>2300 square feet</li>
+                    <li>Central AC</li>
+                    <li>Central heating</li>
+                    <li>In-unit laundry</li>
+                    <li>Street parking</li>
+                    <li>4 persons live here</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for Property 3 -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h3>Single Family</h3>
+            <img src="images/property3.jpg" alt="Property Image3">
+            <section>
+                <h3>Common Spaces:</h3>
+                <ul>
+                    <li>Fully furnished common areas include a large living room, dining area, and well-equipped kitchen.</li>
+                    <li>In-unit washer and dryer for your laundry needs.</li>
+                </ul>
+                <h3>Location:</h3>
+                <ul>
+                    <li>Conveniently situated just a five-minute drive from UNC Charlotte.</li>
+                    <li>Walking distance to Walmart for all your shopping essentials.</li>
+                </ul>
+                <p>Don’t miss out on this fantastic opportunity! Contact us today to schedule a viewing or for more details.</p>
+                <h3>Unit Details:</h3>
+                <ul>
+                    <li>House</li>
+                    <li>5 beds · 3 baths</li>
+                    <li>2300 square feet</li>
+                    <li>Central AC</li>
+                    <li>Central heating</li>
+                    <li>In-unit laundry</li>
+                    <li>Street parking</li>
+                    <li>4 persons live here</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Function to open a modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,129 +1,134 @@
-/* Basic Reset */
-body, h1, h2, p {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
     background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
 
 header {
     background: #007BFF;
     color: white;
-    padding: 10px 20px;
     text-align: center;
+    padding: 20px 0;
 }
 
 header h1 {
-    font-size: 2rem;
+    margin: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
     padding: 20px;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .listing {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .property-card {
-    background: #fff;
+    background: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    overflow: hidden;
-    width: calc(33.333% - 20px);
+    width: 300px;
+    text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .property-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Center and Fit Images */
 .property-card img {
+    display: block;
+    margin: 0 auto;
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.property-card .details {
-    padding: 10px;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
+    border-bottom: 1px solid #ddd;
 }
 
 .property-card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 .property-card p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    margin: 10px 15px;
+    color: #666;
 }
 
 .property-card .price {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #007BFF;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .property-card {
-        width: calc(50% - 20px);
-    }
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
 }
 
-@media (max-width: 480px) {
-    .property-card {
-        width: 100%;
-    }
+.modal-content {
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
 }
 
-.description {
-    font-size: 1rem;
-    color: #f1f1f1;
-    margin-top: 10px;
-    font-weight: 300;
-    padding: 0 10px;
-    line-height: 1.6;
+.modal-content img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 400px; /* Ensures modal images fit nicely */
+    object-fit: contain;
+    margin-bottom: 20px;
 }
 
-/* Section and List Styling */
-section {
-    margin-top: 15px;
-    padding: 10px;
-    border-top: 1px solid #ddd;
+.modal-content h3 {
+    margin-top: 0;
+    color: #333;
 }
 
-section h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #007BFF;
-}
-
-section ul {
-    list-style-type: disc;
-    margin: 0;
+.modal-content ul {
+    list-style: disc;
     padding-left: 20px;
 }
 
-section ul li {
-    margin-bottom: 8px;
-    line-height: 1.5;
+.modal-content ul li {
+    margin-bottom: 10px;
 }
 
-section p {
+.modal-content p {
     margin-top: 10px;
     font-weight: bold;
     color: #555;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
