@@ -71,6 +71,36 @@ header h1 {
     color: #007BFF;
 }
 
+/* Badge for Rooms Available */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #FF5722;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Progress Bar for Rooms */
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 15px auto;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
 /* Modal Styles */
 .modal {
     display: none; /* Hidden by default */
